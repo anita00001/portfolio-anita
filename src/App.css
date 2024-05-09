@@ -1,0 +1,45 @@
+.active {
+  color: #ffb6b9;
+}
+
+.active-logo {
+  color: #fff;
+}
+
+/* Effect on Storytelling: Pixel that tell stories */
+@keyframes colorChange {
+  0% { color: #035d86 };
+  50% { color: #0e9492 };
+  100% { color: #aa090e };
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, #035d86, #aa090e, #0e9492);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: colorChange 3s infinite alternate;
+}
+
+/* waving */
+.wave-emoji::after {
+  content: '👋';
+  display: inline-block;
+  animation: wave 3s infinite;
+}
+
+@keyframes wave {
+  0% { transform: translateY(0); }
+  25% { transform: translateX(0) rotate(90deg); }
+  100% { transform: translateY(0); }
+}
+
+/* Font of Anita Sharma */
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.font-lobster {
+  font-family: 'Lobster', cursive;
+  color: #035d86
+}
