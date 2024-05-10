@@ -72,5 +72,13 @@
   animation: slide-up 5s ease forwards;
 }
 
+/* About Me*/
+.font-crete {
+  font-family: 'Crete Round', sans-serif;
+}
 
-
+.text-gradient {
+  background: linear-gradient(to right, #035d86, #aa090e, #0e9492);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

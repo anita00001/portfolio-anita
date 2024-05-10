@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div className='mt-0'>
+      <div>
         <Home />
         <Portfolio />
         <About />
