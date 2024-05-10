@@ -43,3 +43,34 @@
   font-family: 'Lobster', cursive;
   color: #035d86
 }
+
+/* Fade-out animation */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fade-out 1s ease forwards;
+}
+
+/* Slide-up animation */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 5s ease forwards;
+}
+
+
+
