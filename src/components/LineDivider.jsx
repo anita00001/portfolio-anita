@@ -2,7 +2,7 @@ import React from "react";
 
 const LineDivider = () => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center bg-color4">
       <div className="h-0.5 bg-gray-500 w-1/2 relative">
 
         <div className="absolute inset-y-0 left-0 flex items-center justify-center">
