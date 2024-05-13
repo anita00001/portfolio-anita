@@ -4,6 +4,8 @@ import AboutDescription from '../components/AboutDescription';
 import LineDivider from '../components/LineDivider';
 import Service from '../components/Service';
 import Skill from '../components/Skill';
+import Experience from '../components/Experience';
+import Education from '../components/Education';
 
 const About = () => {
   return (
@@ -14,8 +16,13 @@ const About = () => {
       </div>
       < LineDivider />
       <div id="service-skill" className="min-h-screen bg-color4 grid grid-cols-2 gap-4 px-20">
-        <div className="photo">< Service /></div>
-        <div classname="about-description">< Skill /></div>
+        <div className="about-service">< Service /></div>
+        <div classname="about-skill">< Skill /></div>
+      </div>
+      < LineDivider />
+      <div id="experience-education" className="min-h-screen bg-color4 grid grid-cols-2 gap-4 px-20">
+        <div className="about-experience">< Experience /></div>
+        <div classname="about-education">< Education /></div>
       </div>
       < LineDivider />
     </>
