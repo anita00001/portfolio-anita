@@ -17,6 +17,7 @@ const About = () => {
         <div className="photo">< Service /></div>
         <div classname="about-description">< Skill /></div>
       </div>
+      < LineDivider />
     </>
   );
 };
