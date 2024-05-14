@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { submitFormData } from '../redux/Forms/formSlice';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -6,7 +8,10 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
+
   const [showThankYou, setShowThankYou] = useState(false);
+
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,6 +20,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(submitFormData(formData));
     setFormData({
       name: '',
       email: '',
@@ -77,7 +83,7 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button className="text-xl p-4 text-justify border border-color2 flex items-center bg-color1 hover:bg-color6 hover:border-color1 text-white">
+        <button type="submit" className="text-xl p-4 text-justify border border-color2 flex items-center bg-color1 hover:bg-color6 hover:border-color1 text-white">
           Get in Touch
         </button>
       </form>
