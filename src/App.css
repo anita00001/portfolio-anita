@@ -82,3 +82,9 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Scrollbar */
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #579bbb #468dad;
+}

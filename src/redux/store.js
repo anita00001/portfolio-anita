@@ -5,6 +5,7 @@ import softSkillReducer from './Skills/softSkillSlice';
 import educationReducer from './Educations/educationSlice';
 import experienceReducer from './Experiences/experienceSlice';
 import formReducer from './Forms/formSlice';
+import projectReducer from './Projects/projectSlice';
 
 const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
     experience: experienceReducer,
     education: educationReducer,
     form: formReducer,
+    projects: projectReducer,
   },
 });
 
