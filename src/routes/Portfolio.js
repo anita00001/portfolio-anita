@@ -7,11 +7,13 @@ import PortfolioProject from '../components/PortfolioProject';
 const Portfolio = () => {
   return (
     <>
+    <div id="portfolio" >
       <div className="featured-photo"><FeaturedProject /></div>
-      <div id="portfolio-projects" className="min-h-screen bg-color4 px-20 py-10">
+      <div className="portfolio-project min-h-screen bg-color4 px-20 py-10">
         <PortfolioProject />
       </div>
       <LineDivider />
+      </div>
     </>
   );
 };
