@@ -8,8 +8,8 @@ const ProjectFilter = ({ filter, dispatch }) => {
                 <button
                     key={category}
                     onClick={() => dispatch(setFilter(category))}
-                    className={`px-4 py-2 mx-10 mb-10 bg-color1 text-white rounded-lg shadow-md hover:bg-color6 ${
-                        filter === category ? 'border-2 border-color6' : ''
+                    className={`px-4 py-2 mx-10 mb-10 bg-color1 text-white rounded-lg shadow-md ${
+                        filter === category ? 'font-bold' : ''
                     }`}
                 >
                     {category}

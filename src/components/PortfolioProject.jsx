@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ProjectFilter from './ProjectFilter';
 import ProjectGrid from './ProjectGrid';
@@ -14,6 +14,9 @@ const PortfolioProject = () => {
             return acc;
         }, {})
     );
+
+    // Ref for scrolling to the top of the filter and project section
+    const sectionRef = useRef(null);
 
     const sortedProjects = [
         ...projects.filter((project) => project.type === 'Full Stack'),
@@ -40,18 +43,27 @@ const PortfolioProject = () => {
         }));
     };
 
+    const handleScrollToTop = () => {
+        if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-color4 pl-20 pb-20">
-            <div className="flex justify-center">
-                <h1 className="text-4xl font-bold font-crete text-gradient mb-10">Projects</h1>
+            <div ref={sectionRef}>
+                <div className="flex justify-center">
+                    <h1 className="text-4xl font-bold font-crete text-gradient mb-10">Projects</h1>
+                </div>
+                <ProjectFilter filter={filter} dispatch={dispatch} />
             </div>
-            <ProjectFilter filter={filter} dispatch={dispatch} />
             <ProjectGrid projects={displayedProjects} projectViews={projectViews} onToggleView={handleViewToggle} />
             <ViewMoreButton
                 showAllProjects={showAllProjects}
                 showAllFullStack={showAllFullStack}
                 fullStackProjects={fullStackProjects}
                 dispatch={dispatch}
+                onScrollToTop={handleScrollToTop}
             />
         </div>
     );
