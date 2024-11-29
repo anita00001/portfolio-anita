@@ -24,11 +24,13 @@ const PortfolioProject = () => {
     // Logic for determining displayed projects
     const filteredProjects = filter === 'All' ? projects : projects.filter((project) => project.type === filter);
     const fullStackProjects = projects.filter((project) => project.type === 'Full Stack');
-    const displayedProjects = showAllProjects
-        ? sortedProjects // Display sorted projects when "See All Projects" is clicked
-        : showAllFullStack
-        ? fullStackProjects
-        : fullStackProjects.slice(0, 3);
+const displayedProjects = showAllProjects
+    ? sortedProjects // Display all sorted projects when "See All Projects" is clicked
+    : filter === 'All'
+    ? (showAllFullStack ? fullStackProjects : fullStackProjects.slice(0, 3)) // Handle "All" filter logic
+    : (showAllFullStack ? filteredProjects : filteredProjects.slice(0, 3)); // Handle other filters
+
+
 
     // Handle view toggle for individual project
     const handleViewToggle = (projectId) => {
