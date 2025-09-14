@@ -49,7 +49,7 @@ const Service = () => {
                 key={service.id}
                 onClick={() => handleServiceClick(service.id)}
               >
-                <div className="icon col-span-1 border border-color2 flex items-center justify-center h-16">
+                <div className="icon col-span-1 flex items-center justify-center h-16">
                   <Icon className="text-3xl" aria-hidden />
                 </div>
                 <div className="service-name col-span-4">

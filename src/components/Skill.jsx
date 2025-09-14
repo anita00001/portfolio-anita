@@ -44,11 +44,12 @@ const Skill = () => {
                     className="skills grid grid-cols-3 gap-4 p-4 my-4 border border-color2 bg-color1 hover:bg-color6 hover:border-color1"
                     key={technicalSkill.id}
                   >
-                    <div className="icon col-span-1 border border-color2 flex items-center justify-center h-16">
+                    <div className="icon col-span-1 flex items-center justify-center h-16">
                       <TechIcon className="text-3xl" aria-hidden />
                     </div>
-                    <div className="service-name col-span-2">
-                      <h4 className="font-bold">{technicalSkill.name}</h4>
+                    {/* Center vertically + align text to the right */}
+                    <div className="service-name col-span-2 flex items-center justify-center w-full">
+                      <h4 className="text-center">{technicalSkill.name}</h4>
                     </div>
                   </div>
                 );
@@ -82,11 +83,12 @@ const Skill = () => {
                     className="skills grid grid-cols-3 gap-4 p-4 my-4 border border-color2 bg-color1 hover:bg-color6 hover:border-color1"
                     key={softSkill.id}
                   >
-                    <div className="icon col-span-1 border border-color2 flex items-center justify-center h-16">
+                    <div className="icon col-span-1 flex items-center justify-center h-16">
                       <SoftIcon className="text-3xl" aria-hidden />
                     </div>
-                    <div className="service-name col-span-2">
-                      <h4 className="font-bold">{softSkill.name}</h4>
+                    {/* Center vertically + align text to the right */}
+                    <div className="service-name col-span-2 flex items-center justify-center w-full">
+                      <h4 className="text-center">{softSkill.name}</h4>
                     </div>
                   </div>
                 );
