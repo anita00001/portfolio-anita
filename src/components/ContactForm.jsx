@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { submitFormData } from '../redux/Forms/formSlice';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,6 @@ const ContactForm = () => {
   });
 
   const [showThankYou, setShowThankYou] = useState(false);
-
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -20,14 +20,33 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Send to Redux store
     dispatch(submitFormData(formData));
+
+    // Send email using EmailJS
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then((result) => {
+      console.log('Email successfully sent!', result.text);
+      setShowThankYou(true);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error.text);
+    });
+
+    // Reset form fields
     setFormData({
       name: '',
       email: '',
       message: '',
     });
-    
-    setShowThankYou(true);
+
+    // Hide thank you message after 5s
     setTimeout(() => {
       setShowThankYou(false);
     }, 5000);
@@ -37,7 +56,7 @@ const ContactForm = () => {
     <>
       <form onSubmit={handleSubmit} className="form-contact p-20">
         <div className="text-color2 text-lg">
-          {showThankYou ? "Thank you for reaching out!" : "Please fill the form to get in touch!"}
+          {showThankYou ? "Thank you for reaching out! I’ll get back to you soon." : "Please fill the form to get in touch!"}
         </div>
         <div className="pt-8">
           <label className="block text-gray-700 text-sm font-bold" htmlFor="name">
