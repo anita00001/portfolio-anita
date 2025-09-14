@@ -21,13 +21,13 @@ const NavBar = () => {
           <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500} className="text-white">
             Home
           </ScrollLink>
-          <ScrollLink to="portfolio" spy={true} smooth={true} offset={-70} duration={500} className="text-white">
+          <ScrollLink to="portfolio" spy={true} smooth={true} duration={500} className="text-white">
             Portfolio
           </ScrollLink>
-          <ScrollLink to="about" spy={true} smooth={true} offset={-70} duration={500} className="text-white">
+          <ScrollLink to="about" spy={true} smooth={true} duration={500} className="text-white">
             About
           </ScrollLink>
-          <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500} className="text-white">
+          <ScrollLink to="contact" spy={true} smooth={true} duration={500} className="text-white">
             Contact
           </ScrollLink>
           <a

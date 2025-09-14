@@ -40,13 +40,19 @@ const Intro = () => {
           <Typewriter text="Anita Sharma" />
         </h2>
         <p className="text-xl pt-4 text-justify">
-          I'm a seasoned Full Stack Web Developer proficient in JavaScript, React, Redux, Ruby, and Ruby on Rails.
-          
-          With a strong grasp of design principles, UX optimization, and responsive web development, I manifest dynamic user interfaces and robust server-side applications. I thrive on challenges, delivering top-tier solutions that surpass client expectations.
+          I’m a developer specializing in{" "}
+          <span className="font-bold">JavaScript</span>,{" "}
+          <span className="font-bold">Bootstrap</span>,{" "}
+          <span className="font-bold">Tailwind CSS</span>,{" "}
+          <span className="font-bold">React</span>,{" "}
+          <span className="font-bold">Redux</span>,{" "}
+          <span className="font-bold">JEST</span>,{" "}
+          <span className="font-bold">Ruby</span>, and{" "}
+          <span className="font-bold">Ruby on Rails</span>, building scalable,
+          maintainable, and high-performing applications. My passion lies in creating
+          user-friendly experiences that blend aesthetics with functionality.
         </p>
-        {/* <p className="text-xl pt-10 text-justify text-center border-red">
-          Let's collaborate and bring your imaginations to life in the digital realm!
-        </p> */}
+        
       </div>
     </>
   );

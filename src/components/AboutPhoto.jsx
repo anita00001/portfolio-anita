@@ -12,7 +12,7 @@ const AboutPhoto = () => {
   };
 
   return (
-    <div className="mx-20 w-1/2 flex justify-center items-center h-screen relative">
+    <div className="mx-20 mt-20 w-1/2 flex justify-center items-center h-screen relative">
         <div className="absolute bg-blue-200 rounded-lg mx-20 w-80 h-80"></div>
         <img
             src={profilePicture}
