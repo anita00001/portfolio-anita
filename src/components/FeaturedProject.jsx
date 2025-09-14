@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import featuredImage from '../assets/featured-project.jpg'; // Replace with your image path
-import featuredVideo from '../assets/featured-project.mp4'; // Replace with your video path
+import featuredVideo from '../assets/projects/fall-back-video.mp4'; // Replace with your video path
 
 const FeaturedProject = () => {
   const [view, setView] = useState('photo'); // 'photo' or 'video'
