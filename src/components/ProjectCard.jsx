@@ -6,9 +6,9 @@ const ProjectCard = ({ project, view, onToggleView, isReversed }) => {
             <div className="relative mt-20 w-80 h-80">
                 <div className="bg-blue-200 rounded-lg p-4 shadow-lg">
                     {view === 'photo' ? (
-                        <img src={project.mediaPhoto} alt={project.title} className="rounded-lg w-80 h-80 object-cover" />
+                        <img src={project.mediaPhoto} alt={project.title} className="rounded-lg w-80 h-80 object-contain" />
                     ) : (
-                        <video src={project.mediaVideo} controls className="rounded-lg w-80 h-80 object-cover" />
+                        <video src={project.mediaVideo} controls className="rounded-lg w-80 h-80 object-contain" />
                     )}
                 </div>
                 <div className="flex justify-center mt-4">
@@ -26,7 +26,9 @@ const ProjectCard = ({ project, view, onToggleView, isReversed }) => {
                     className="border border-color1 text-xl mb-5 pr-10 text-justify overflow-y-auto scrollable"
                     style={{ minHeight: '250px', maxHeight: '250px' }}
                 >
-                    <p>{project.description}</p>
+                    <p style={{ whiteSpace: "pre-line" }}>
+                        {project.description}
+                    </p>
                 </div>
                 <div className="my-6">
                     <div className="flex flex-wrap gap-2">
