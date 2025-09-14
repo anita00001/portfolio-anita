@@ -13,13 +13,13 @@ const AboutDescription = () => {
           style={{ maxHeight: '250px' }} // Fixed height with scroll
         >
           <p className="text-xl py-4 text-justify">
-            I’m a seasoned Full Stack Web Developer specializing in JavaScript, Bootstrap, React, Redux, Tailwind CSS, Ruby, and Ruby on Rails.
+            I’m a seasoned Full Stack Web Developer specializing in JavaScript, Bootstrap, React, Redux, Tailwind CSS, Ruby, and Ruby on Rails. With a strong foundation in modern design principles, UX optimization, and responsive development, I create applications that are scalable, maintainable, and intuitive — blending performance with engaging user experiences.
           </p>
           <p className="text-xl py-1 text-justify">
-            With a strong foundation in modern design principles, UX optimization, and responsive development, I build applications that are not only scalable and maintainable but also engaging and intuitive for users. I thrive on solving complex problems and transforming ideas into elegant, high-performing solutions. Whether it’s crafting seamless user interfaces or architecting robust server-side systems, I focus on delivering work that exceeds expectations.
+            I thrive on solving complex challenges and transforming ideas into elegant, high-performing solutions. From crafting seamless interfaces to architecting robust back-end systems, my focus is always on delivering results that exceed expectations.
           </p>
           <p className="text-xl py-1 mb-2 text-justify">
-            Beyond coding, I’m a passionate chess player and painting enthusiast — constantly exploring new perspectives that inspire creativity in my development process. I’m driven by the fusion of design, code, and human experience, and I’m excited to collaborate on projects that make a real impact.
+            Beyond coding, I’m a passionate chess player and painting enthusiast, constantly exploring new perspectives that fuel my creativity and problem-solving approach. Driven by the fusion of design, code, and human experience, I’m always excited to collaborate on projects that make a meaningful impact.
           </p>
         </div>
         <a href={resumePdf} download className="text-xl mt-8 p-4 text-justify border border-color2 flex items-center bg-color1 hover:bg-color6 hover:border-color1 text-white w-max">
